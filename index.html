@@ -33,6 +33,29 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="blog.css" rel="stylesheet">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDqIZjnT-BnlN_TqflNlmI9UdSYJbZnP1I",
+        authDomain: "ktf1989-github-io.firebaseapp.com",
+        databaseURL: "https://ktf1989-github-io.firebaseio.com",
+        projectId: "ktf1989-github-io",
+        storageBucket: "ktf1989-github-io.appspot.com",
+        messagingSenderId: "8982819691",
+        appId: "1:8982819691:web:489b6f1f8fc73b0929d22e",
+        measurementId: "G-X7DQ3151RD"
+      };
+      // Initialize Firebase
+      Window.fireApp = firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </head>
 <body>
     <div class="container">
@@ -52,24 +75,15 @@
           </div>
         </div>
       </header>
-    
+
+      <!-- Navigation items are loaded using knockout binding to the NavBarItems collection-->
       <div class="nav-scroller py-1 mb-2">
-        <nav class="nav d-flex justify-content-between">
-          <a class="p-2 text-muted" href="#">World</a>
-          <a class="p-2 text-muted" href="#">U.S.</a>
-          <a class="p-2 text-muted" href="#">Technology</a>
-          <a class="p-2 text-muted" href="#">Design</a>
-          <a class="p-2 text-muted" href="#">Culture</a>
-          <a class="p-2 text-muted" href="#">Business</a>
-          <a class="p-2 text-muted" href="#">Politics</a>
-          <a class="p-2 text-muted" href="#">Opinion</a>
-          <a class="p-2 text-muted" href="#">Science</a>
-          <a class="p-2 text-muted" href="#">Health</a>
-          <a class="p-2 text-muted" href="#">Style</a>
-          <a class="p-2 text-muted" href="#">Travel</a>
+        <nav class="nav d-flex justify-content-between" data-bind="foreach: NavBarItems">
+          <a class="p-2 text-muted" data-bind="text: linkText" data-bind="href: link"></a>
         </nav>
       </div>
-    
+      <!-- /Navigation End-->
+
       <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
           <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
@@ -228,7 +242,10 @@
       </p>
     </footer>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js" integrity="sha256-YASERpEeN8gRNr/Fy4Km34WGFqIq1h6HkJMAQnVHlhk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js" integrity="sha256-Tjl7WVgF1hgGMgUKZZfzmxOrtoSf8qltZ9wMujjGNQk=" crossorigin="anonymous"></script>
+    <script src="knockout-viewmodels.js" ></script>
 </body>
 </html>
 
