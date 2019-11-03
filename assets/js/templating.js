@@ -64,7 +64,6 @@ window.loadSidebar = function (){
     $.Mustache.load('/templates/items-template.html')
         .done(function () {
             $("#menu>ul").mustache('item-tmpl', items);
-            if(item !== undefined) item.active = 'active';
             window.setupSidebar();
     });
 };
