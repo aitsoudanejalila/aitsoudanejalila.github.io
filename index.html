@@ -521,7 +521,7 @@ print 'It took ' + i + ' iterations to sort the deck.';
 		<script src="/assets/js/main.js"></script>
 
 		<script>
-			window.appendMdTo("./doc.md", $("markdown-container"));
+			$(document).ready(() => window.appendMdTo("./doc.md", $("markdown-container")));
 		</script>
 	</body>
 </html>
