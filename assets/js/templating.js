@@ -1,17 +1,21 @@
-window.loadSidebar = function (path){
+window.loadSidebar = function (){
+    
+    var pathName = window.location.pathname;
+    pathName = pathName.replace('.html', '').replace('/', '').replace('/', ''); 
+    
     var items =
     [
         { 
             "id": 1,
             "text": "Acceuil",
             "link": "/",
-            "active": ""
+            "active": pathName == "index" ? "active" : "" 
         },
         {
             "id": 2,
             "text": "Publications et Communications",
             "hasSubItems": true,
-            "active": '',
+            "active": pathName == "publications" || pathName == "publications" ? "active" : "",
             "items": [
                 { "_text": "Publications", "_link": "/communications" },
                 { "_text": "Communications", "_link": "/publications" }                
@@ -21,7 +25,7 @@ window.loadSidebar = function (path){
             "id": 3,
             "text": "Activites et Services",
             "hasSubItems": true,
-            "active": "",
+            "active": pathName == "activites" || pathName == "services" ? "active" : "",
             "items": [
                 { "_text": "Activites", "_link": "/activites" },
                 { "_text": "Services", "_link": "/services" }                
@@ -31,25 +35,25 @@ window.loadSidebar = function (path){
             "id": 4,
             "text": "Enseignement",
             "link": "/enseignement",
-            "active": ""
+            "active": pathName == "enseignement" ? "active" : "",
         },
         {
             "id": 5,
             "text": "Evenements",
             "link": "/evenements",
-            "active": ""
+            "active": pathName == "evenements" ? "active" : "",
         },
         {
             "id": 6,
             "text": "Biographie",
             "link": "/biographie",
-            "active": ""
+            "active": pathName == "biographie" ? "active" : "",
         },
         {
             "id": 7,
             "text": "Formation",
             "hasSubItems": true,
-            "active": '',            
+            "active": pathName == "master" || pathName == "doctorat" || pathName == "license" ? "active" : "",
             "items": [
                 { "_text": "License", "_link": "/license" },
                 { "_text": "Matser", "_link": "/master" },
@@ -60,10 +64,7 @@ window.loadSidebar = function (path){
     $.Mustache.load('/templates/items-template.html')
         .done(function () {
             $("#menu>ul").mustache('item-tmpl', items);
-            var pathName = window.location.pathname;
-            pathName = pathName.replace('.html', ''); 
-            item = items.find(i => i.text.replace('/', '') == pathName);
-            item.active = 'active';
+            if(item !== undefined) item.active = 'active';
             window.setupSidebar();
     });
 };
