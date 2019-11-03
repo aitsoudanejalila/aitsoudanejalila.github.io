@@ -15,7 +15,7 @@ window.loadSidebar = function (){
             "id": 2,
             "text": "Publications et Communications",
             "hasSubItems": true,
-            "active": pathName == "publications" || pathName == "publications" ? "active" : "",
+            "active": pathName == "communications" || pathName == "publications" ? "active" : "",
             "items": [
                 { "_text": "Publications", "_link": "/publications" },
                 { "_text": "Communications", "_link": "/communications" }                
