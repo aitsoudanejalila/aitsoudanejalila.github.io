@@ -1,11 +1,11 @@
 <script type="text/html" id="item-tmpl">
     <li>
         {{^hasSubItems}}
-            <a href="{{link}}">{{text}}</a>
+            <a class="{{active}}" href="{{link}}">{{text}}</a>
         {{/hasSubItems}}
 
         {{#hasSubItems}}
-            <span class="opener">{{text}}</span>
+            <span class="opener {{active}}">{{text}}</span>
             <ul>
                 {{#items}}
                     <li><a href="{{_link}}">{{_text}}</a></li>

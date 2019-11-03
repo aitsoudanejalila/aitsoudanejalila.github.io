@@ -1,15 +1,17 @@
-window.loadSidebar = function (){
+window.loadSidebar = function (path){
     var items =
     [
         { 
             "id": 1,
             "text": "Acceuil",
-            "link": "/"
+            "link": "/",
+            "active": ""
         },
         {
             "id": 2,
             "text": "Publications et Communications",
             "hasSubItems": true,
+            "active": '',
             "items": [
                 { "_text": "Publications", "_link": "/communications" },
                 { "_text": "Communications", "_link": "/publications" }                
@@ -19,6 +21,7 @@ window.loadSidebar = function (){
             "id": 3,
             "text": "Activites et Services",
             "hasSubItems": true,
+            "active": "",
             "items": [
                 { "_text": "Activites", "_link": "/activites" },
                 { "_text": "Services", "_link": "/services" }                
@@ -27,22 +30,26 @@ window.loadSidebar = function (){
         {
             "id": 4,
             "text": "Enseignement",
-            "link": "/enseignement"
+            "link": "/enseignement",
+            "active": ""
         },
         {
             "id": 5,
             "text": "Evenements",
-            "link": "/evenements"
+            "link": "/evenements",
+            "active": ""
         },
         {
             "id": 6,
             "text": "Biographie",
-            "link": "/biographie"
+            "link": "/biographie",
+            "active": ""
         },
         {
             "id": 7,
             "text": "Formation",
             "hasSubItems": true,
+            "active": '',            
             "items": [
                 { "_text": "License", "_link": "/license" },
                 { "_text": "Matser", "_link": "/master" },
@@ -53,6 +60,10 @@ window.loadSidebar = function (){
     $.Mustache.load('/templates/items-template.html')
         .done(function () {
             $("#menu>ul").mustache('item-tmpl', items);
+            var pathName = window.location.pathname;
+            pathName = pathName.replace('.html', ''); 
+            item = items.find(i => i.text.replace('/', '') == pathName);
+            item.active = 'active';
             window.setupSidebar();
     });
 };
