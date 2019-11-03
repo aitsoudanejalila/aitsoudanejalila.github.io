@@ -1,7 +1,7 @@
 $(document).ready(function() {
     var items =
         [
-            {
+            { 
                 "id": 1,
                 "text": "Acceuil",
                 "link": "/"
