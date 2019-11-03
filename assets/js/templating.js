@@ -11,8 +11,8 @@ window.loadSidebar = function (){
             "text": "Publications et Communications",
             "hasSubItems": true,
             "items": [
-                { "text": "Publications", "link": "/communications" },
-                { "text": "Communications", "link": "/publications" }                
+                { "_text": "Publications", "_link": "/communications" },
+                { "_text": "Communications", "_link": "/publications" }                
             ]
         },
         {
@@ -20,8 +20,8 @@ window.loadSidebar = function (){
             "text": "Activites et Services",
             "hasSubItems": true,
             "items": [
-                { "text": "Activites", "link": "/activites" },
-                { "text": "Services", "link": "/services" }                
+                { "_text": "Activites", "_link": "/activites" },
+                { "_text": "Services", "_link": "/services" }                
             ]
         },
         {
@@ -44,9 +44,9 @@ window.loadSidebar = function (){
             "text": "Formation",
             "hasSubItems": true,
             "items": [
-                { "text": "License", "link": "/license" },
-                { "text": "Matser", "link": "/master" },
-                { "text": "Doctorat", "link": "/doctorat" },                
+                { "_text": "License", "_link": "/license" },
+                { "_text": "Matser", "_link": "/master" },
+                { "_text": "Doctorat", "_link": "/doctorat" },                
             ]
         }
     ];
