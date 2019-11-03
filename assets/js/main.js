@@ -35,7 +35,7 @@ window.appendMdTo = function (uri, element){
 		console.log(success);		
 		var result = new showdown.Converter().makeHtml(success);
 		element.html(result);
-		element.fadeIn(3000);
+		element.fadeIn(2000);
 	});
 };
 
