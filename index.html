@@ -32,9 +32,9 @@
 									<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
 								</ul>
 							</header>
-							<section id="markdown-container"></section>
+							<section id="markdown-container" style="display: none;"></section>
 							<div class="slide">
-								<section class="hbox"  data-markdown>
+								<section class="hbox" style="display: none;" data-markdown>
 										# Elements
 										## Sample Content
 										Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc. Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing lorem ipsum dolor sit amet nullam veroeros adipiscing.
@@ -543,7 +543,11 @@ print 'It took ' + i + ' iterations to sort the deck.';
 		<script src="/assets/js/main.js"></script>
 
 		<script>
-			$(document).ready(() => window.appendMdTo("./doc.md", $("#markdown-container")));
+			$(document).ready(() => {
+				window.loadMarkdowns();
+				window.appendMdTo("./doc.md", $("#markdown-container"));
+			});
+				
 		</script>
 	</body>
 </html>

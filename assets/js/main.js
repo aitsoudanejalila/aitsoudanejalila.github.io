@@ -13,7 +13,7 @@
 
 // If you're not using this as a userscript just delete from this line up. It's cool, homey.
 
-(function boom(){  
+window.loadMarkdowns = function (){  
 	[].forEach.call( document.querySelectorAll('[data-markdown]'), function  fn(elem){
 		
 	  // strip leading whitespace so it isn't evaluated as code
@@ -26,17 +26,16 @@
   
 	  // here, have sum HTML
 	  elem.innerHTML = html;
-  
-	});
-  
-  }());
+	  $(elem).fadeIn(2000);
+	});  
+};
 
 window.appendMdTo = function (uri, element){
 	$.get(uri).done(function(success) {
 		console.log(success);		
 		var result = new showdown.Converter().makeHtml(success);
-		element.html(result)
-		element.fadeIn(1500);
+		element.html(result);
+		element.fadeIn(3000);
 	});
 };
 
