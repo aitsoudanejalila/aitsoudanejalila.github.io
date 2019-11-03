@@ -22,7 +22,7 @@
 		  leadingws = text.match(/^\n?(\s*)/)[1].length,
 		  regex     = new RegExp('\\n?\\s{' + leadingws + '}','g'),
 		  md        = text.replace(regex,'\n'),
-		  html      = (new Showdown.converter()).makeHtml(md);
+		  html      = (new showdown.Converter()).makeHtml(md);
   
 	  // here, have sum HTML
 	  elem.innerHTML = html;
