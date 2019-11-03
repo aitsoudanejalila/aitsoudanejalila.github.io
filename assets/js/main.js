@@ -13,16 +13,7 @@
 
 // If you're not using this as a userscript just delete from this line up. It's cool, homey.
 
-(function boom(){
-  
-	if (!window.Showdown){
-	  var scr = document.createElement('script');
-	  scr.onload = boom;
-	  scr.src = '  https://unpkg.com/showdown/dist/showdown.min.js';
-	  document.body.appendChild(scr);
-	  return;
-	}
-  
+(function boom(){  
 	[].forEach.call( document.querySelectorAll('[data-markdown]'), function  fn(elem){
 		
 	  // strip leading whitespace so it isn't evaluated as code
