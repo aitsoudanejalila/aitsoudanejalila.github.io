@@ -1,8 +1,10 @@
 <script type="text/html" id="item-tmpl">
     <!-- BEGIN: Item Template. -->
+    {{^item.hasSubItems}}
     <li class="item">
         <a href="{{link}}">{{text}}</a>
     </li>
+    {{^item.hasSubItems}}
     {{#item.hasSubItems}}
         <span class="opener">Publications et Communications</span>
         <ul>
