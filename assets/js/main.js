@@ -38,7 +38,7 @@ window.appendMdTo = function (uri, element){
 		element.html(result);
 	});
 };
-window.appendMdTo("./doc.md", $("markdown-container");
+window.appendMdTo("./doc.md", $("markdown-container"));
 (function($) {
 
 	var	$window = $(window),
