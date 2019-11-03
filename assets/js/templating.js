@@ -1,4 +1,4 @@
-function loadSidebar (){
+(function loadSidebar (){
     var items =
     [
         { 
@@ -53,7 +53,8 @@ function loadSidebar (){
     $.Mustache.load('./templates/items-template.html')
         .done(function () {
             $('.items').mustache('item-tmpl', items);
+            $('.items').removeClass('.items');
     });
-}
+})();
 
 $(document).ready(loadSidebar());
