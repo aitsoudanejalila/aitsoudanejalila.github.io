@@ -1,4 +1,4 @@
-(function loadSidebar (){
+window.loadSidebar = function (){
     var items =
     [
         { 
@@ -55,6 +55,6 @@
             $('.items').mustache('item-tmpl', items);
             $('.items').removeClass('.items');
     });
-})();
+};
 
-$(document).ready(loadSidebar());
+$(document).ready(() => window.loadSidebar());
