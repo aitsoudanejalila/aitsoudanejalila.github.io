@@ -18,7 +18,7 @@
 	if (!window.Showdown){
 	  var scr = document.createElement('script');
 	  scr.onload = boom;
-	  scr.src = 'https://cdn.rawgit.com/showdownjs/showdown/master/src/showdown.js';
+	  scr.src = '  https://unpkg.com/showdown/dist/showdown.min.js';
 	  document.body.appendChild(scr);
 	  return;
 	}
