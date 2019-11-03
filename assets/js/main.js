@@ -33,11 +33,11 @@
 
 window.appendMdTo = function (uri, element){
 	$.get(uri).done(function(success) {
-		var result = new showdown.Converter().makeHtml(success.responseText);
+		console.log(success);		
+		var result = new showdown.Converter().makeHtml(success);
 		element.html(result);
 	});
 };
-window.appendMdTo("./doc.md", $("#markdown-container"));
 
 (function($) {
 
