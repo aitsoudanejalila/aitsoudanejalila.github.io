@@ -35,7 +35,8 @@ window.appendMdTo = function (uri, element){
 	$.get(uri).done(function(success) {
 		console.log(success);		
 		var result = new showdown.Converter().makeHtml(success);
-		$(element).html(result).fadeIn();
+		element.html(result)
+		element.fadeIn(1500);
 	});
 };
 
