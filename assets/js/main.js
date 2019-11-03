@@ -30,6 +30,15 @@
 	});
   
   }());
+
+function appendMdTo(element){
+	$.get("./doc.md").done(function(success) {
+		var result = new showdown().Converter().makeHtml(success);
+		$(element).innerHTML = result;
+	});
+};
+applyMdTo($("#markdown-container"));
+
 (function($) {
 
 	var	$window = $(window),
