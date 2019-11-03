@@ -1,17 +1,16 @@
 <script type="text/html" id="item-tmpl">
-    <!-- BEGIN: Item Template. -->
     <li>
-    {{^hasSubItems}}
-        <a href="{{link}}">{{text}}</a>
-    {{/hasSubItems}}
-    {{#hasSubItems}}
+        {{^hasSubItems}}
+            <a href="{{link}}">{{text}}</a>
+        {{/hasSubItems}}
+
+        {{#hasSubItems}}
             <span class="opener">{{text}}</span>
             <ul>
-            {{#items}}
-                <li><a href="{{_link}}">{{_text}}</a></li>
-            {{/items}}
-        </ul>
-    {{/hasSubItems}}
+                {{#items}}
+                    <li><a href="{{_link}}">{{_text}}</a></li>
+                {{/items}}
+            </ul>
+        {{/hasSubItems}}
     </li>
-    <!-- END: Item Template. -->
 </script>
