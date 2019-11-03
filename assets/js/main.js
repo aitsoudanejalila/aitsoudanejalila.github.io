@@ -31,13 +31,13 @@
   
   }());
 
-function appendMdTo(element){
-	$.get("./doc.md").done(function(success) {
-		var result = new showdown().Converter().makeHtml(success);
-		$(element).innerHTML = result;
+window.appendMdTo = function (uri, element){
+	$.get(uri).done(function(success) {
+		var result = new showdown.Converter().makeHtml(success.responseText);
+		element.html(result);
 	});
 };
-applyMdTo($("#markdown-container"));
+window.appendMdTo("./doc.md", $("#markdown-container"));
 
 (function($) {
 
