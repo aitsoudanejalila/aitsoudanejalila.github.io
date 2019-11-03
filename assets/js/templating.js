@@ -52,8 +52,7 @@ window.loadSidebar = function (){
     ];
     $.Mustache.load('./templates/items-template.html')
         .done(function () {
-            $('.items').mustache('item-tmpl', items);
-            $('.items').removeClass('.items');
+            $("#menu>ul").mustache('item-tmpl', items);
     });
 };
 
