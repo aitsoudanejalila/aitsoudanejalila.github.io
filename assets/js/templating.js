@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
     var items =
         [
             { 
@@ -54,4 +54,3 @@ $(document).ready(function() {
         .done(function () {
             $('.items').mustache('item-tmpl', items);
     });
-})();
