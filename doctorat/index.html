@@ -39,7 +39,8 @@
 									<header class="main">
 										<h1>Doctorat</h1>
 									</header>
-									<section id="markdown-container" style="display: none;"></section>
+									<section id="markdown-container-0" style="display: none;"></section>
+									<section id="markdown-container-1" style="display: none;"></section>
 								</section>
 						</div>
 					</div>
@@ -102,8 +103,8 @@
 		<script>
 			$(document).ready(() => {
 				window.loadMarkdowns();
-				window.appendMdTo("./encadrement-de-theses.md", $("#markdown-container"));
-				window.appendMdTo("./participation-a-des-jurys.md", $("#markdown-container"));
+				window.appendMdTo("./encadrement-de-theses.md", $("#markdown-container-0"));
+				window.appendMdTo("./participation-a-des-jurys.md", $("#markdown-container-1"));
 			});
 		</script>
 	</body>
