@@ -1,5 +1,3 @@
-# LICENCE :
-
 - Responsable du module << Itinéaire de création d'entreprise >> module majeur du semestre 1 dans le cadre de la Licence Professionnelle,FSJES Agdal.
 
 - Responsable du module << Gestion des Ressources Humaines >> module majeur du semestre 2 dans le cadre de la Licence Professionnelle,FSJES Agdal.
