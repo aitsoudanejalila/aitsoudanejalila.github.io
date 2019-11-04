@@ -54,8 +54,7 @@ Esprit de l'entrepreneuriat et l'employabilite au province du Sud
 
 
 
- ## PARTICIPATION A DES JURYS DE THESES DE DOCTORAT ## TITRE 
-
+ ## PARTICIPATION A DES JURYS DE THESES DE DOCTORAT
 
 - Rapporteur Et Membre Du Jury De Thèse De Doctorat En Sciences De Gestion « Le Coaching Managerial Dans Les Organisations Marocaines : 
 Analyses Et Recommandations  », Fsjes Agdal
