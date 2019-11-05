@@ -42,7 +42,13 @@ window.loadSidebar = function (){
             "text": "Evenements",
             "link": "/evenements",
             "active": pathName == "evenements" ? "active" : "",
-        },
+		},
+        {
+            "id": 8,
+            "text": "Livres",
+            "link": "/livres",
+            "active": pathName == "livres" ? "active" : "",
+        },		
         {
             "id": 6,
             "text": "Biographie",
