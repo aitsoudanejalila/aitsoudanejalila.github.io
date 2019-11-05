@@ -5,11 +5,6 @@ RUBRIQUE PUBLICATIONS :
 sous la direction de Brahim Boudarbat, Université de Montréal et Aly Mbaye, Université Cheikh Anta Diop de Dakar, avec (Karima Ghazouani, Chiadmi Meryem et Solhi Sanae)
 
 
-- (2019) « What sustainable tourism practices for moroccan tourist », Chapitre dans l’ouvrage collectif « Struggles and Successes in the Pursuit of Sustainable Development », 
-The Routledge/PRME (Principles for Responsible Management Education) Book Series (avec Karima Ghazouani).
-
-- (2019) « Le tutorat, nouvelle posture de l’enseignant, pour quel apprentissage? Retour d’expérience » (avec Karima Ghazouani.
-
 - (2019) « Le rôle de l’écosystème dans la promotion de la R&D et l’innovation cas du maroc » in Knowledge, Economy & Management », 
 5th international conférence on knowledge, Economy & management proceedings, 21-24 Avril 2019, pp. 285- 289 (avec Karima Ghazouani et Mortada bouchera) ISBN:978-6/0-86036-5-3
 
