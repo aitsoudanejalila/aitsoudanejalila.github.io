@@ -1,9 +1,10 @@
-- Responsable du module << Itinéaire de création d'entreprise >> module majeur du semestre 1 dans le cadre de la Licence Professionnelle,FSJES Agdal.
+Matières enseignées :
 
-- Responsable du module << Gestion des Ressources Humaines >> module majeur du semestre 2 dans le cadre de la Licence Professionnelle,FSJES Agdal.
+ « itinéraire de création d’entreprise » Semestre 1, dans le cadre de la Licence Professionnelle, FSJES, Agdal
 
-- Responsable du module << Gestion des Ressources Humaines >> module majeur du semestre 6 dans le cadre de la Licence d'Excellence en Sciences de Gestion,FSJES Agdal.
+ « Gestion des Ressources Humaines » Semestre 2, dans le cadre de la Licence Professionnelle, FSJES, Agdal
 
-- Responsable du module << Problèmes Economiques et Sociaux >> module majeur du semestre 6
-dans le cadre de la Licence fondamentale,FSJES Agdal.
+ « Gestion des Ressources Humaines » Semestre 6, dans le cadre de la Licence d’excellence en Sciences de Gestion, FSJES, Agdal
+
+ « Problèmes économiques et sociaux » Semestre 6, dans le cadre de la Licence fondamentale, FSJES, Agdal
 
