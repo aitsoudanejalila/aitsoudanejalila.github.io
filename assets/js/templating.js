@@ -55,7 +55,7 @@ window.loadSidebar = function (){
             "hasSubItems": true,
             "active": pathName == "master" || pathName == "doctorat" || pathName == "license" ? "active" : "",
             "items": [
-                { "_text": "License", "_link": "/license" },
+                { "_text": "Licence", "_link": "/licence" },
                 { "_text": "Matser", "_link": "/master" },
                 { "_text": "Doctorat", "_link": "/doctorat" },                
             ]
