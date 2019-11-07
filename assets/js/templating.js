@@ -352,9 +352,9 @@ window.setupSidebar = function() {
 window.loadHeader = function(){
 	$.Mustache.load('/templates/header-template.html')
 	.done(function () {
-		var activeItem = window.navItems.find(i => i.active === 'active');
-		if(activeItem.items != 'undefined') {
-			title = activeItem.items.find(i => i.active === 'active')._text;
+		var activeItem = window.navItems.find(i => i.active === "active");
+		if(activeItem.items !== undefined) {
+			title = activeItem.items.find(i => i.active === "active")._text;
 		} else title = activeItem.text;
 		$("#header").mustache('header-tmpl', { title: title });
 	});
