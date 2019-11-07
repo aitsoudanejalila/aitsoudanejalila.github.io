@@ -48,6 +48,12 @@ window.loadSidebar = function (){
             "text": "Livres",
             "link": "/livres",
             "active": pathName == "livres" ? "active" : "",
+		},		
+        {
+            "id": 8,
+            "text": "MASTER MANAGEMENT STRATEGIQUE DES RESSOURCES HUMAINES",
+            "link": "/msrh",
+            "active": pathName == "livres" ? "active" : "",
         },		
         {
             "id": 6,
