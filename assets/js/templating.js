@@ -1,3 +1,5 @@
+var pathName = window.location.pathname;
+pathName = pathName.replace('.html', '').replace('/', '').replace('/', ''); 
 window.navItems =
 [
 	{ 
@@ -81,10 +83,7 @@ window.navItems =
 	}
 ];
 window.loadSidebar = function (){
-    
-    var pathName = window.location.pathname;
-    pathName = pathName.replace('.html', '').replace('/', '').replace('/', ''); 
-    
+        
     $.Mustache.load('/templates/items-template.html')
         .done(function () {
             $("#menu>ul").mustache('item-tmpl', window.navItems);
