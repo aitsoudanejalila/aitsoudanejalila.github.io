@@ -53,8 +53,20 @@ window.loadSidebar = function (){
             "id": 8,
             "text": "MASTER MANAGEMENT STRATEGIQUE DES RESSOURCES HUMAINES",
             "link": "/msrh",
-            "active": pathName == "livres" ? "active" : "",
-        },		
+            "active": pathName == "msrh" ? "active" : "",
+		},	
+        {
+            "id": 9,
+            "text": "CONTRIBUTION A DES PROJETS NATIONAUX",
+            "link": "/contributions",
+            "active": pathName == "contributions" ? "active" : "",
+		},
+		{
+            "id": 10,
+            "text": "Prix",
+            "link": "/prix",
+            "active": pathName == "prix" ? "active" : "",
+        },			
         {
             "id": 6,
             "text": "Biographie",
