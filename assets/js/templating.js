@@ -24,8 +24,8 @@ window.navItems =
 		"hasSubItems": true,
 		"active": pathName == "activites" || pathName == "services" ? "active" : "",
 		"items": [
-			{ "_text": "Activites", "_link": "/activites" },
-			{ "_text": "Services", "_link": "/services" }                
+			{ "_text": "Activites", "_link": "/activites", "active": pathName == "activites" ? "active" : ""},
+			{ "_text": "Services", "_link": "/services", "active": pathName == "services" ? "active" : "" }                
 		]
 	},
 	{
@@ -352,7 +352,11 @@ window.setupSidebar = function() {
 window.loadHeader = function(){
 	$.Mustache.load('/templates/header-template.html')
 	.done(function () {
-		$("#header").mustache('header-tmpl', { title: window.navItems.find(i => i.active == true).text });
+		var activeItem = window.navItems.find(i => i.active == "active");
+		if(activeItems.items != 'undefined') {
+			activeItem = activeItem.items.find(i => i.active == "active");
+		} 
+		$("#header").mustache('header-tmpl', { title: activeItem.text });
 
 	});
 };
