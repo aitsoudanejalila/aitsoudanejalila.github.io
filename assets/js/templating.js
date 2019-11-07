@@ -6,7 +6,7 @@ window.navItems =
 		"id": 1,
 		"text": "Acceuil",
 		"link": "/",
-		"active": pathName == "index" ? "active" : "" 
+		"active": pathName == "index" || "" ? "active" : "" 
 	},
 	{
 		"id": 2,
@@ -14,8 +14,8 @@ window.navItems =
 		"hasSubItems": true,
 		"active": pathName == "communications" || pathName == "publications" ? "active" : "",
 		"items": [
-			{ "_text": "Publications", "_link": "/publications" },
-			{ "_text": "Communications", "_link": "/communications" }                
+			{ "_text": "Publications", "_link": "/publications", "active": pathName == "publications" ? "active" : "" },
+			{ "_text": "Communications", "_link": "/communications", "active": pathName == "communications" ? "active" : "" }                
 		]
 	},
 	{
@@ -76,9 +76,9 @@ window.navItems =
 		"hasSubItems": true,
 		"active": pathName == "master" || pathName == "doctorat" || pathName == "license" ? "active" : "",
 		"items": [
-			{ "_text": "Licence", "_link": "/licence" },
-			{ "_text": "Matser", "_link": "/master" },
-			{ "_text": "Doctorat", "_link": "/doctorat" },                
+			{ "_text": "Lisence", "_link": "/lisence", "active": pathName == "lisence" ? "active" : "" },
+			{ "_text": "Matser", "_link": "/master", "active": pathName == "master" ? "active" : "" },
+			{ "_text": "Doctorat", "_link": "/doctorat", "active": pathName == "dotorat" ? "active" : "" },                
 		]
 	}
 ];
@@ -352,9 +352,9 @@ window.setupSidebar = function() {
 window.loadHeader = function(){
 	$.Mustache.load('/templates/header-template.html')
 	.done(function () {
-		var activeItem = window.navItems.find(i => i.active == "active");
+		var activeItem = window.navItems.find(i => i.active === 'active');
 		if(activeItem.items != 'undefined') {
-			title = activeItem.items.find(i => i.active == "active")._text;
+			title = activeItem.items.find(i => i.active === 'active')._text;
 		} else title = activeItem.text;
 		$("#header").mustache('header-tmpl', { title: title });
 	});
