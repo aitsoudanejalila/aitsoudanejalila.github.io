@@ -1,93 +1,93 @@
+window.navItems =
+[
+	{ 
+		"id": 1,
+		"text": "Acceuil",
+		"link": "/",
+		"active": pathName == "index" ? "active" : "" 
+	},
+	{
+		"id": 2,
+		"text": "Publications et Communications",
+		"hasSubItems": true,
+		"active": pathName == "communications" || pathName == "publications" ? "active" : "",
+		"items": [
+			{ "_text": "Publications", "_link": "/publications" },
+			{ "_text": "Communications", "_link": "/communications" }                
+		]
+	},
+	{
+		"id": 3,
+		"text": "Activites et Services",
+		"hasSubItems": true,
+		"active": pathName == "activites" || pathName == "services" ? "active" : "",
+		"items": [
+			{ "_text": "Activites", "_link": "/activites" },
+			{ "_text": "Services", "_link": "/services" }                
+		]
+	},
+	{
+		"id": 4,
+		"text": "Enseignement",
+		"link": "/enseignement",
+		"active": pathName == "enseignement" ? "active" : "",
+	},
+	{
+		"id": 5,
+		"text": "Evenements",
+		"link": "/evenements",
+		"active": pathName == "evenements" ? "active" : "",
+	},
+	{
+		"id": 8,
+		"text": "Livres",
+		"link": "/livres",
+		"active": pathName == "livres" ? "active" : "",
+	},		
+	{
+		"id": 8,
+		"text": "MASTER MANAGEMENT STRATEGIQUE DES RESSOURCES HUMAINES",
+		"link": "/msrh",
+		"active": pathName == "msrh" ? "active" : "",
+	},	
+	{
+		"id": 9,
+		"text": "CONTRIBUTION A DES PROJETS NATIONAUX",
+		"link": "/contributions",
+		"active": pathName == "contributions" ? "active" : "",
+	},
+	{
+		"id": 10,
+		"text": "Prix",
+		"link": "/prix",
+		"active": pathName == "prix" ? "active" : "",
+	},			
+	{
+		"id": 6,
+		"text": "Biographie",
+		"link": "/biographie",
+		"active": pathName == "biographie" ? "active" : "",
+	},
+	{
+		"id": 7,
+		"text": "Formation",
+		"hasSubItems": true,
+		"active": pathName == "master" || pathName == "doctorat" || pathName == "license" ? "active" : "",
+		"items": [
+			{ "_text": "Licence", "_link": "/licence" },
+			{ "_text": "Matser", "_link": "/master" },
+			{ "_text": "Doctorat", "_link": "/doctorat" },                
+		]
+	}
+];
 window.loadSidebar = function (){
     
     var pathName = window.location.pathname;
     pathName = pathName.replace('.html', '').replace('/', '').replace('/', ''); 
     
-    var items =
-    [
-        { 
-            "id": 1,
-            "text": "Acceuil",
-            "link": "/",
-            "active": pathName == "index" ? "active" : "" 
-        },
-        {
-            "id": 2,
-            "text": "Publications et Communications",
-            "hasSubItems": true,
-            "active": pathName == "communications" || pathName == "publications" ? "active" : "",
-            "items": [
-                { "_text": "Publications", "_link": "/publications" },
-                { "_text": "Communications", "_link": "/communications" }                
-            ]
-        },
-        {
-            "id": 3,
-            "text": "Activites et Services",
-            "hasSubItems": true,
-            "active": pathName == "activites" || pathName == "services" ? "active" : "",
-            "items": [
-                { "_text": "Activites", "_link": "/activites" },
-                { "_text": "Services", "_link": "/services" }                
-            ]
-        },
-        {
-            "id": 4,
-            "text": "Enseignement",
-            "link": "/enseignement",
-            "active": pathName == "enseignement" ? "active" : "",
-        },
-        {
-            "id": 5,
-            "text": "Evenements",
-            "link": "/evenements",
-            "active": pathName == "evenements" ? "active" : "",
-		},
-        {
-            "id": 8,
-            "text": "Livres",
-            "link": "/livres",
-            "active": pathName == "livres" ? "active" : "",
-		},		
-        {
-            "id": 8,
-            "text": "MASTER MANAGEMENT STRATEGIQUE DES RESSOURCES HUMAINES",
-            "link": "/msrh",
-            "active": pathName == "msrh" ? "active" : "",
-		},	
-        {
-            "id": 9,
-            "text": "CONTRIBUTION A DES PROJETS NATIONAUX",
-            "link": "/contributions",
-            "active": pathName == "contributions" ? "active" : "",
-		},
-		{
-            "id": 10,
-            "text": "Prix",
-            "link": "/prix",
-            "active": pathName == "prix" ? "active" : "",
-        },			
-        {
-            "id": 6,
-            "text": "Biographie",
-            "link": "/biographie",
-            "active": pathName == "biographie" ? "active" : "",
-        },
-        {
-            "id": 7,
-            "text": "Formation",
-            "hasSubItems": true,
-            "active": pathName == "master" || pathName == "doctorat" || pathName == "license" ? "active" : "",
-            "items": [
-                { "_text": "Licence", "_link": "/licence" },
-                { "_text": "Matser", "_link": "/master" },
-                { "_text": "Doctorat", "_link": "/doctorat" },                
-            ]
-        }
-    ];
     $.Mustache.load('/templates/items-template.html')
         .done(function () {
-            $("#menu>ul").mustache('item-tmpl', items);
+            $("#menu>ul").mustache('item-tmpl', window.navItems);
             window.setupSidebar();
     });
 };
@@ -332,20 +332,35 @@ window.setupSidebar = function() {
 				var $this = $(this);
 
 				$this.on('click', function(event) {
-
+					
 					// Prevent default.
-						event.preventDefault();
+					event.preventDefault();
 
 					// Toggle.
 						$menu_openers.not($this).removeClass('active');
 						$this.toggleClass('active');
-
+						
 					// Trigger resize (sidebar lock).
-						$window.triggerHandler('resize.sidebar-lock');
+					$window.triggerHandler('resize.sidebar-lock');
 
 				});
 
 			});
 
 };
-$(document).ready(() => window.loadSidebar());
+
+
+window.loadHeader = function(){
+	$.Mustache.load('/templates/header-template.html')
+	.done(function () {
+		$("#header").mustache('header-tmpl', { title: window.navItems.find(i => i.active == true).text });
+
+	});
+};
+
+$(document).ready(() => { 
+	window.loadHeader();	
+	window.loadSidebar();
+});
+
+[{"Id":":TestModels","Name":"TestModels","DisplayName":null,"AreaName":null,"Actions":[{"Id":":TestModels:Get","Name":"Get","DisplayName":null,"ControllerId":":TestModels"},{"Id":":TestModels:Post","Name":"Post","DisplayName":null,"ControllerId":":TestModels"},{"Id":":TestModels:Put","Name":"Put","DisplayName":null,"ControllerId":":TestModels"},{"Id":":TestModels:Delete","Name":"Delete","DisplayName":null,"ControllerId":":TestModels"}]}]
