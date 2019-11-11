@@ -365,4 +365,3 @@ $(document).ready(() => {
 	window.loadSidebar();
 });
 
-[{"Id":":TestModels","Name":"TestModels","DisplayName":null,"AreaName":null,"Actions":[{"Id":":TestModels:Get","Name":"Get","DisplayName":null,"ControllerId":":TestModels"},{"Id":":TestModels:Post","Name":"Post","DisplayName":null,"ControllerId":":TestModels"},{"Id":":TestModels:Put","Name":"Put","DisplayName":null,"ControllerId":":TestModels"},{"Id":":TestModels:Delete","Name":"Delete","DisplayName":null,"ControllerId":":TestModels"}]}]
