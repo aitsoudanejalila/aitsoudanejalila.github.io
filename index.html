@@ -22,6 +22,7 @@
 						<!-- Header -->
 						<header id="header">
 							<h1>Bienvenue!</h1>
+							<p id="header-container" style="display: none;"></p>
 						</header>
 						<p id="markdown-container" style="display: none;"></p>
 						</div>
@@ -123,6 +124,7 @@
 				window.loadMarkdowns();
 				window.loadHeader();
 				window.appendMdTo("./acceuil.md", $("#markdown-container"));
+				window.appendMdTo("./header.md", $("#header-container"));
 			});
 				
 		</script>
